@@ -1,32 +1,32 @@
 view html_container(title):
-	<html>
-		<head>
-			<title>
-				<py>title</py>
-			</title>
-			<link href="/static/style.css" rel="stylesheet"></link>
-		</head>
-		<body>
-			yield
-		</body>
-	</html>
+    <html>
+        <head>
+            <title>
+                <py>title</py>
+            </title>
+            <link href="/static/style.css" rel="stylesheet"></link>
+        </head>
+        <body>
+            yield
+        </body>
+    </html>
 
 
 view mapped_list(mapper, lst):
-	<ul>
-		for x in map(mapper, lst):
-			<li>
-				<py>x</py>
-			</li>
-	</ul>
-	yield
+    <ul>
+        for x in map(mapper, lst):
+            <li>
+                <py>x</py>
+            </li>
+    </ul>
+    yield
 
 
 view component(items):
-	<div klass="component">
-		<p>
-			<py>'This is a reusabe component!'</py>
-		</p>
-		<mapped_list mapper=(lambda x: x ** 2) lst=items></mapped_list>
-	</div>
-	yield #make this a component instead of a regular view
+    <div klass="component">
+        <p>
+            <py>'This is a reusabe component!'</py>
+        </p>
+        <mapped_list mapper=(lambda x: x ** 2) lst=items></mapped_list>
+    </div>
+    yield #make this a component instead of a regular view
