@@ -1,0 +1,25 @@
+from components import component, html_container
+
+
+view index(items):
+	<html_container title="Index">
+		<div id="container">
+			<h1>
+				<a href="/foo">
+					<py>'This is the index page :)'</py>
+				</a>
+			</h1>
+			<component items=items></component>
+		</div>
+	</html_container>
+
+
+view foo():
+	<html_container title="Foo">
+		<div id="container">
+			<h1>
+				<py>'This is the foo page :)'</py>
+			</h1>
+			<component items=[4, 2, 5, 6]></component>
+		</div>
+	</html_container>
