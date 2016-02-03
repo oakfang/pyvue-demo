@@ -1,3 +1,5 @@
+# -*- mode: python;-*-
+
 view html_container(title):
     <html>
         <head>
